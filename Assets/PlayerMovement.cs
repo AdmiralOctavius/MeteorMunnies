@@ -4,6 +4,7 @@ public class PlayerMovement : MonoBehaviour {
 
     public float speed = 5;
     public float rotationSpd = 150;
+    public GameObject laser;
 	// Use this for initialization
 	void Start () {
         Application.targetFrameRate = 60;
@@ -26,12 +27,20 @@ public class PlayerMovement : MonoBehaviour {
         if (Input.GetKey(KeyCode.D))
         {
             //gameObject.transform.Rotate(0, 0, (-1 * rotationSpd) * Time.deltaTime);
-            rB.AddTorque(rotationSpd);
+            rB.AddTorque(-rotationSpd);
         }
         if (Input.GetKey(KeyCode.A))
         {
-            rB.AddTorque(-rotationSpd);
+            rB.AddTorque(rotationSpd);
             //gameObject.transform.Rotate(0, 0, rotationSpd * Time.deltaTime);
+        }
+        if (laser == null)
+        {
+            Debug.Log("Need to give a laser game object");
+        }
+        if (Input.GetAxis("Laser") > 0)
+        {
+            Instantiate(laser, transform.position, transform.rotation);
         }
 	}
 }

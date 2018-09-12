@@ -53,9 +53,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\AsteroidScript.cs" />
      <Compile Include="Assets\CameraControls.cs" />
      <Compile Include="Assets\CannonScript.cs" />
      <Compile Include="Assets\PlayerMovement.cs" />
+     <Compile Include="Assets\WrapAround.cs" />
+     <Compile Include="Assets\WrapAroundPlayer.cs" />
  <Reference Include="UnityEditor.StandardEvents">
  <HintPath>C:/Users/bennett253/Documents/UnityClass/MeteorMunnies/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
  </Reference>
