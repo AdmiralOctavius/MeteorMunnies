@@ -5,6 +5,9 @@ public class PlayerMovement : MonoBehaviour {
     public float speed = 5;
     public float rotationSpd = 150;
     public GameObject laser;
+    public float fireRate = 2;
+
+    private float lastFireTime = float.MinValue;
 	// Use this for initialization
 	void Start () {
         Application.targetFrameRate = 60;
@@ -34,13 +37,24 @@ public class PlayerMovement : MonoBehaviour {
             rB.AddTorque(rotationSpd);
             //gameObject.transform.Rotate(0, 0, rotationSpd * Time.deltaTime);
         }
+       
+	}
+
+    void Update()
+    {
         if (laser == null)
         {
             Debug.Log("Need to give a laser game object");
         }
         if (Input.GetAxis("Laser") > 0)
         {
-            Instantiate(laser, transform.position, transform.rotation);
+            if (Time.time - (1 / fireRate) > lastFireTime)
+            {
+                GameObject obj = Instantiate(laser, transform.GetChild(0).position, transform.rotation);
+                obj.GetComponent<SpriteRenderer>().color = Random.ColorHSV(0, 1, 1, 1, 1,1,1,1);
+                lastFireTime = Time.time;
+            }
         }
-	}
+
+    }
 }

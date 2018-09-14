@@ -54,8 +54,10 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\AsteroidScript.cs" />
+     <Compile Include="Assets\ButtonScript.cs" />
      <Compile Include="Assets\CameraControls.cs" />
      <Compile Include="Assets\CannonScript.cs" />
+     <Compile Include="Assets\LaserScript.cs" />
      <Compile Include="Assets\PlayerMovement.cs" />
      <Compile Include="Assets\WrapAround.cs" />
      <Compile Include="Assets\WrapAroundPlayer.cs" />
