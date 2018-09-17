@@ -57,8 +57,12 @@
      <Compile Include="Assets\ButtonScript.cs" />
      <Compile Include="Assets\CameraControls.cs" />
      <Compile Include="Assets\CannonScript.cs" />
+     <Compile Include="Assets\Damage.cs" />
+     <Compile Include="Assets\EasyWrapAround.cs" />
+     <Compile Include="Assets\Health.cs" />
      <Compile Include="Assets\LaserScript.cs" />
      <Compile Include="Assets\PlayerMovement.cs" />
+     <Compile Include="Assets\Spawner.cs" />
      <Compile Include="Assets\WrapAround.cs" />
      <Compile Include="Assets\WrapAroundPlayer.cs" />
  <Reference Include="UnityEditor.StandardEvents">
