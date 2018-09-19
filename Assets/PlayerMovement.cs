@@ -51,6 +51,11 @@ public class PlayerMovement : MonoBehaviour {
             if (Time.time - (1 / fireRate) > lastFireTime)
             {
                 GameObject obj = Instantiate(laser, transform.GetChild(0).position, transform.rotation);
+
+                //Hue Saturation Value
+                //Hue - color
+                //Saturation - how much color/intensity
+                //Value - lightness/Darkness
                 obj.GetComponent<SpriteRenderer>().color = Random.ColorHSV(0, 1, 1, 1, 1,1,1,1);
                 lastFireTime = Time.time;
             }

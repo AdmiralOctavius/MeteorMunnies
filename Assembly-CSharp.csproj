@@ -61,6 +61,7 @@
      <Compile Include="Assets\EasyWrapAround.cs" />
      <Compile Include="Assets\Health.cs" />
      <Compile Include="Assets\LaserScript.cs" />
+     <Compile Include="Assets\LifeTime.cs" />
      <Compile Include="Assets\PlayerMovement.cs" />
      <Compile Include="Assets\Spawner.cs" />
      <Compile Include="Assets\WrapAround.cs" />
